@@ -35,6 +35,7 @@ const Login = props => {
       <h1>Welcome to the Bubble App!</h1>
       <div className="login-form">
         <form onSubmit={handleSubmit}>
+          <h1>Log In</h1>
           <input
             type="text"
             name="username"

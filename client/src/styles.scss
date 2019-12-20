@@ -8,6 +8,10 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .App {
@@ -95,5 +99,49 @@ form {
     color: white;
     padding: 3px 8px;
     margin-top: 16px;
+  }
+}
+
+.login-form {
+  form {
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 16px;
+    background: #F7F7F7;
+
+    h1 {
+      background: #43D1AF;
+      padding: 20px 0;
+      font-size: 140%;
+      font-weight: 300;
+      text-align: center;
+      color: #fff;
+      margin: -16px -16px 16px -16px;
+    }
+
+    input {
+      width: 100%;
+      background: #fff;
+      margin-bottom: 4%;
+      border: 1px solid #ccc;
+      padding: 3%;
+      color: #555;
+    }
+    input:focus {
+      box-shadow: 0 0 5px #43D1AF;
+      padding: 3%;
+      border: 1px solid #43D1AF;
+    }
+    
+    button {
+      width: 100%;
+      padding: 3%;
+      background: #43D1AF;
+      border-bottom: 2px solid #30C29E;
+      border-top-style: none;
+      border-right-style: none;
+      border-left-style: none;	
+      color: #fff;
+    }
   }
 }
