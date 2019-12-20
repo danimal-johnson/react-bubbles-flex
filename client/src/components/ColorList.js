@@ -18,15 +18,15 @@ const ColorList = ({ colors, updateColors }) => {
 
   const saveEdit = e => {
     e.preventDefault();
-    // Make a put request to save your updated color
-    // think about where will you get the id from...
-    // where is is saved right now?
     console.log(colorToEdit);
+    const colorsCopy = colors.filter( c => c.id !== colorToEdit.id);
+    colorsCopy.push (colorToEdit);
 
     axiosWithAuth()
       .put(`/colors/${colorToEdit.id}`, colorToEdit)
       .then( res => {
-        console.log(res);
+        console.log("COLOR UPDATED:", res.data);
+        updateColors(colorsCopy);
       })
       .catch( err => console.error(err));
 
@@ -37,12 +37,7 @@ const ColorList = ({ colors, updateColors }) => {
     axiosWithAuth()
       .delete(`/colors/${color.id}`)
       .then( res => {
-        console.log(res);
-        console.log( "Killing ID", color.id );
-        console.log( colors.map( c => c ) );
-        console.log( colors.filter( c => c.id !== color.id) );
         updateColors( colors.filter( c => c.id !== color.id) );
-
       })
       .catch( err => console.error(err));
   };

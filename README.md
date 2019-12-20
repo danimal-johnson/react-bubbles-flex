@@ -59,7 +59,7 @@ Follow these steps to set up and work on your project:
 - [x] Push commits: git push origin `<firstName-lastName>`.
 - [x] **RUN** `yarn install or npm install` at the root to retrieve all the dependencies for the node server. You will not need to create any react apps here nor will you need to install any other dependencies. You should have all you need in this repo.
 - [x] **LOOK** at all the files you've been given for this project. One important file to note is `server.js`. This file contains an **API** that you are going to be interfacing with. Below is documentation on how to interact with the **API**.
-- [ ] **RUN** `yarn start or npm start` to get your API up and running on `http://localhost:5000`. This is the **URL** you're going to need to use within your React app in order to make AJAX requests for data.
+- [x] **RUN** `yarn start or npm start` to get your API up and running on `http://localhost:5000`. This is the **URL** you're going to need to use within your React app in order to make AJAX requests for data.
 - [x] **LOOK** at your `client` directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
 - [x] **cd** into `client` and run `yarn install or npm install` to retrieve the client side dependencies.
 - [x] **RUN** `yarn start or npm start` to fire up your React application.
@@ -85,9 +85,9 @@ Build a login form to authenticate your users.
 
 ### Stage 2 - Consuming the API
 
-- [ ] When `BubblePage` renders, make a GET request to fetch the color data for your bubbles.
-- [ ] In `ColorList.js`, complete the `saveEdit` and `deleteColor` functions to make AJAX requests to the API to edit/delete data
-- [ ] Watch and enjoy as your app responds to updates in the data. Check out `Bubbles.js` to see how this is built.
+- [x] When `BubblePage` renders, make a GET request to fetch the color data for your bubbles.
+- [X] In `ColorList.js`, complete the `saveEdit` and `deleteColor` functions to make AJAX requests to the API to edit/delete data
+- [X] Watch and enjoy as your app responds to updates in the data. Check out `Bubbles.js` to see how this is built.
 
 ### API Documentation
 
