@@ -38,6 +38,11 @@ const ColorList = ({ colors, updateColors }) => {
       .delete(`/colors/${color.id}`)
       .then( res => {
         console.log(res);
+        console.log( "Killing ID", color.id );
+        console.log( colors.map( c => c ) );
+        console.log( colors.filter( c => c.id !== color.id) );
+        updateColors( colors.filter( c => c.id !== color.id) );
+
       })
       .catch( err => console.error(err));
   };
