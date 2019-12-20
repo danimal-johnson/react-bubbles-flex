@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axiosWithAuth from '../utils/axiosWithAuth';
 
-const Login = () => {
+const Login = props => {
   // make a post request to retrieve a token from the api
 
   const [credentials, updateCreds] = useState ({
@@ -17,7 +17,7 @@ const Login = () => {
       .then(res => {
         console.log(res.data);
         localStorage.setItem("token", res.data.payload);
-        // props.history.push(/) BubblePage
+        props.history.push("/bubbles");
       })
       .catch(err => console.error(err) );
 
